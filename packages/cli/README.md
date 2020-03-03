@@ -9,9 +9,10 @@ A command line interface for SPAship.
 
 <!-- toc -->
 
-- [@spaship/cli](#spashipcli)
+- [SPAship CLI](#spaship-cli)
 - [Usage](#usage)
 - [Commands](#commands)
+- [Writing tests](#writing-tests)
   <!-- tocstop -->
 
 # Usage
@@ -23,7 +24,7 @@ $ npm install -g @spaship/cli
 $ spaship COMMAND
 running command...
 $ spaship (-v|--version|version)
-@spaship/cli/0.3.4 darwin-x64 node-v10.15.3
+@spaship/cli/0.3.5 darwin-x64 node-v13.7.0
 $ spaship --help [COMMAND]
 USAGE
   $ spaship COMMAND
@@ -38,7 +39,6 @@ USAGE
 
 - [`spaship deploy ARCHIVE`](#spaship-deploy-archive)
 - [`spaship help [COMMAND]`](#spaship-help-command)
-- [`spaship init`](#spaship-init)
 
 ## `spaship deploy ARCHIVE`
 
@@ -62,7 +62,7 @@ EXAMPLES
   $ spaship deploy your-app-1.0.0.tgz
 ```
 
-_See code: [src/commands/deploy.js](https://github.com/spaship/cli/blob/v0.3.4/src/commands/deploy.js)_
+_See code: [src/commands/deploy.js](https://github.com/spaship/spaship/blob/v0.3.5/src/commands/deploy.js)_
 
 ## `spaship help [COMMAND]`
 
@@ -79,28 +79,7 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.1/src/commands/help.ts)_
-
-## `spaship init`
-
-Initialize a SPAship config file for your app.
-
-```
-USAGE
-  $ spaship init
-
-OPTIONS
-  -n, --name=name    (required) a human-friendly title for your app
-  -p, --path=path    (required) the URL path for your app under the SPAship domain. ex: /my/app
-  -s, --[no-]single  route all non-asset requests to index.html
-  --overwrite        overwrite existing spaship.yaml
-
-DESCRIPTION
-  Without arguments, init will ask you a few questions and generate a spaship.yaml config file.  The answers can also be
-  passed in as CLI options.
-```
-
-_See code: [src/commands/init.js](https://github.com/spaship/cli/blob/v0.3.4/src/commands/init.js)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.3/src/commands/help.ts)_
 
 <!-- commandsstop -->
 
